@@ -4,17 +4,21 @@ import "./App.css";
 
 const BottomRow = props => {
 
-  const [quarterNumber, setQuarterNumber] = useState(0);
+  const [quarterNumber, setQuarterNumber] = useState(1);
+  const [down, setDowns] = useState(0);
 
   if (quarterNumber===5) {
     return;
   }
+
+
+
   
   return (
     <div className="bottomRow">
       <div className="down">
         <h3 className="down__title">Down</h3>
-        <div className="down__value">3</div>
+        <div className="down__value">{down}</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
@@ -29,7 +33,7 @@ const BottomRow = props => {
         <div className="quarter__value">{quarterNumber}</div>
       <div className="add-ons">
         <button className="quarter-number" onClick={() => { setQuarterNumber(quarterNumber + 1)}}>Change quarter</button>
-        <button className="downs">How far...?</button>
+        <button className="downs" onClick={() => setDowns(down + 1)}>How far...?</button>
       </div>
       </div>
 
