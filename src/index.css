@@ -56,3 +56,16 @@ button:focus {
 button:active {
   transform: scale(0.99);
 }
+
+
+.add-ons {
+  display: block;
+}
+.add-ons button {
+  width: 80px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 0px 5px 0px;
+  border: 1px red solid;
+}
